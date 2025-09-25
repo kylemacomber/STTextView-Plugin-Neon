@@ -45,18 +45,12 @@ public class Coordinator {
 
             if let themeColor = theme.color(forToken: TokenName(neonToken.name)) {
                 attributes[.foregroundColor] = themeColor
-                
-                // TODO: Remove this later.
-                print("themeColor \(themeColor) for token \(TokenName(neonToken.name))")
 
                 if let themeFont = theme.font(forToken: TokenName(neonToken.name)) {
                     attributes[.font] = themeFont
                 }
             } else if let themeDefaultColor = theme.color(forToken: "plain") {
                 attributes[.foregroundColor] = themeDefaultColor
-                
-                // TODO: Remove this later.
-                print("themeDefaultColor \(themeDefaultColor) for token \(TokenName(neonToken.name))")
 
                 if let themeFont = theme.font(forToken: TokenName(neonToken.name)) {
                     attributes[.font] = themeFont
